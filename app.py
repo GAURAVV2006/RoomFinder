@@ -197,6 +197,7 @@ def too_big(_):
     flash("Total photo upload is over 12 MB. Please choose smaller photos.","danger")
     return redirect(request.referrer or url_for("add_property"))
 
-if __name__=="__main__":
-    init_db()
-    app.run(debug=True)
+init_db()
+
+if __name__ == "__main__":
+   app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
