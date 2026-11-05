@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block title %}Owner Registration{% endblock %}
+{% block content %}<section class="form-wrap"><span class="eyebrow">PROPERTY OWNER</span><h1>Create owner account</h1><p>Students can browse rooms without creating an account.</p>
+<form method="post" class="form-card">
+<label>Owner name *<input name="name" required maxlength="80"></label>
+<label>Mobile number *<input name="mobile" required inputmode="tel" maxlength="20"></label>
+<label>Password *<input type="password" name="password" required minlength="6"></label>
+<button class="btn full">Create account</button>
+<p class="muted">Already registered? <a href="{{ url_for('owner_login') }}">Login</a></p>
+</form></section>{% endblock %}
